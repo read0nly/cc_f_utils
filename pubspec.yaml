@@ -1,8 +1,7 @@
 name: cc_f_utils
 description: My flutter utils box.
 version: 0.0.1
-author: nj.readonly@gmail.com
-homepage: https://github.com/read0nly/json_pase_uti
+homepage: https://github.com/read0nly/cc_f_utils
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
