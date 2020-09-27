@@ -6,7 +6,7 @@ extension MoneyStr on double {
   /// 1.102112  ->  '1.1'
   /// 1.001231  ->  '1'
   /// 1.009231  ->  '1.01'
-  String toMoneyStr() {
+  String ccToMoneyStr() {
     if (this == 0) {
       return '0';
     }
@@ -15,9 +15,9 @@ extension MoneyStr on double {
       return value;
     }
     while (value.endsWith('0')) {
-      value = value.removeLast();
+      value = value.ccRemoveLast();
       if (value.endsWith('.')) {
-        value = value.removeLast();
+        value = value.ccRemoveLast();
         break;
       }
     }

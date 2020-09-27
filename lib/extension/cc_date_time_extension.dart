@@ -1,5 +1,5 @@
 extension NextDate on DateTime {
-  DateTime nextMonth(int step) {
+  DateTime ccNextMonth(int step) {
     return DateTime(
       year,
       month + step,
@@ -12,7 +12,7 @@ extension NextDate on DateTime {
     );
   }
 
-  DateTime nextYear(int step) {
+  DateTime ccNextYear(int step) {
     return DateTime(
       year + step,
       month,
@@ -25,7 +25,7 @@ extension NextDate on DateTime {
     );
   }
 
-  DateTime nextDay(int step) {
+  DateTime ccNextDay(int step) {
     return DateTime(
       year,
       month,
@@ -38,7 +38,7 @@ extension NextDate on DateTime {
     );
   }
 
-  DateTime nextHour(int step) {
+  DateTime ccNextHour(int step) {
     return DateTime(
       year,
       month,
@@ -51,7 +51,7 @@ extension NextDate on DateTime {
     );
   }
 
-  DateTime nextMinute(int step) {
+  DateTime ccNextMinute(int step) {
     return DateTime(
       year,
       month,
@@ -64,7 +64,7 @@ extension NextDate on DateTime {
     );
   }
 
-  DateTime nextSecond(int step) {
+  DateTime ccNextSecond(int step) {
     return DateTime(
       year,
       month,
@@ -77,7 +77,7 @@ extension NextDate on DateTime {
     );
   }
 
-  DateTime nextMillisecond(int step) {
+  DateTime ccNextMillisecond(int step) {
     return DateTime(
       year,
       month,
@@ -90,7 +90,7 @@ extension NextDate on DateTime {
     );
   }
 
-  DateTime nextMicrosecond(int step) {
+  DateTime ccNextMicrosecond(int step) {
     return DateTime(
       year,
       month,
@@ -106,11 +106,11 @@ extension NextDate on DateTime {
 
 extension DateUtil on DateTime {
   /// 以秒为计的时间戳
-  int get secondsSinceEpoch => this.millisecondsSinceEpoch ~/ 1000;
+  int get ccSecondsSinceEpoch => this.millisecondsSinceEpoch ~/ 1000;
 
   /// time在一天 的起点 00:00:00 的时刻
-  DateTime get startOfToday => DateTime(this.year, this.month, this.day);
+  DateTime get ccStartOfToday => DateTime(this.year, this.month, this.day);
 
-  DateTime get endOfToday =>
+  DateTime get ccEndOfToday =>
       DateTime(this.year, this.month, this.day, 23, 59, 59, 999, 999);
 }

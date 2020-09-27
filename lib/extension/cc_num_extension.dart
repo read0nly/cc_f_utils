@@ -1,7 +1,7 @@
 import 'cc_string_extension.dart';
 
 extension CommaNum on num {
-  String toCommaStr({int decimalPlaces}) {
+  String ccToCommaStr({int decimalPlaces}) {
     if (this == 0) {
       return '0';
     }
@@ -23,9 +23,9 @@ extension CommaNum on num {
     if (integerStr.length <= 3 && decimalStr.length <= 3) {
       String result = '$integerStr${decimalStr == null ? '' : '.$decimalStr'}';
       while (result.endsWith('0')) {
-        result = result.removeLast();
+        result = result.ccRemoveLast();
         if (result.endsWith('.')) {
-          result = result.removeLast();
+          result = result.ccRemoveLast();
           break;
         }
       }
@@ -38,7 +38,7 @@ extension CommaNum on num {
 
     for (int i = 0; i < integerStr.length; i++) {
       int index = integerStr.length - 1 - i;
-      String c = integerStr.getChar(index);
+      String c = integerStr.ccGetChar(index);
       if (i != 0 && i % 3 == 0) {
         temp = '$c,$temp';
       } else {
@@ -46,14 +46,14 @@ extension CommaNum on num {
       }
     }
     if (temp.startsWith(',')) {
-      temp.removeFirst();
+      temp.ccRemoveFirst();
     }
 
     String result = '$temp${decimalStr == null ? '' : '.$decimalStr'}';
     while (result.endsWith('0')) {
-      result = result.removeLast();
+      result = result.ccRemoveLast();
       if (result.endsWith('.')) {
-        result = result.removeLast();
+        result = result.ccRemoveLast();
         break;
       }
     }

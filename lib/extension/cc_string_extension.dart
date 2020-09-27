@@ -1,5 +1,5 @@
 extension CCRemoveString on String {
-  String removeHead(int len) {
+  String ccRemoveHead(int len) {
     if (len >= this.length) {
       return '';
     }
@@ -7,7 +7,7 @@ extension CCRemoveString on String {
     return this.substring(len);
   }
 
-  String removeTail(int len) {
+  String ccRemoveTail(int len) {
     if (len >= this.length) {
       return '';
     }
@@ -15,15 +15,15 @@ extension CCRemoveString on String {
     return this.substring(0, this.length - len);
   }
 
-  String removeFirst() {
-    return this.removeHead(1);
+  String ccRemoveFirst() {
+    return this.ccRemoveHead(1);
   }
 
-  String removeLast() {
-    return this.removeTail(1);
+  String ccRemoveLast() {
+    return this.ccRemoveTail(1);
   }
 
-  String getChar(int index) {
+  String ccGetChar(int index) {
     if (index < 0 || index > length - 1) {
       return null;
     }
@@ -33,7 +33,7 @@ extension CCRemoveString on String {
 
 extension HideChinaMobilePhone on String {
   /// 隐藏部分11位数的手机号码
-  String hideChinaMobilePhone() {
+  String ccHideChinaMobilePhone() {
     if (this == null || this.isEmpty) {
       return '';
     }
@@ -51,7 +51,7 @@ extension HideChinaMobilePhone on String {
 }
 
 extension HideBankCardNum on String {
-  String hideBankCardNum() {
+  String ccHideBankCardNum() {
     if (this == null || this.isEmpty) {
       return '';
     }
