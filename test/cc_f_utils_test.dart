@@ -1,13 +1,9 @@
+import 'package:cc_f_utils/cc_f_utils.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:cc_f_utils/cc_f_utils.dart';
-
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
+  test('test nextMonth', () {
+    DateTime time = DateTime.now();
+    print(time.nextMonth(-1));
   });
 }
