@@ -23,7 +23,7 @@ class CCButton extends StatefulWidget {
     this.title = '',
     this.titleSize = 14,
     this.titleColor = const Color(0xFF333333),
-    this.disableTitleColor = const Color(0xFF999999),
+    this.disableTitleColor = const Color(0xFF333333),
     this.highlightTitleColor = const Color(0xFF333333),
     this.enable = true,
     this.borderRadius,
