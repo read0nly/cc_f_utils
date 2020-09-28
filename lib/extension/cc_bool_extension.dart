@@ -16,7 +16,7 @@ class WithData<T> extends BooleanExt<T> {
   WithData(this.data);
 }
 
-extension BoolExtension<T> on bool {
+extension ccBoolExtension<T> on bool {
   BooleanExt yes(T block()) {
     if (this) {
       return WithData(block());

@@ -1,11 +1,11 @@
-extension MapNullOrEmpty on Map {
+extension ccMapNullOrEmpty on Map {
   bool get ccIsNullOrEmpty => (this == null || this.isEmpty);
 }
 
-extension IterableExtension on Iterable {
+extension ccIterableExtension on Iterable {
   bool get ccIsNullOrEmpty => (this == null || this.isEmpty);
 }
 
-extension StringExtension on String {
+extension ccStringExtension on String {
   bool get ccIsNullOrEmpty => (this == null || this.isEmpty);
 }

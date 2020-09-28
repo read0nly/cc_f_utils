@@ -31,7 +31,7 @@ extension CCRemoveString on String {
   }
 }
 
-extension HideChinaMobilePhone on String {
+extension ccHideChinaMobilePhoneEx on String {
   /// 隐藏部分11位数的手机号码
   String ccHideChinaMobilePhone() {
     if (this == null || this.isEmpty) {
@@ -50,7 +50,7 @@ extension HideChinaMobilePhone on String {
   }
 }
 
-extension HideBankCardNum on String {
+extension ccHideBankCardNumEx on String {
   String ccHideBankCardNum() {
     if (this == null || this.isEmpty) {
       return '';

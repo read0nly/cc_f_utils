@@ -1,6 +1,6 @@
 import 'cc_string_extension.dart';
 
-extension MoneyStr on double {
+extension ccMoneyStr on double {
   /// Format a double number into an amount string，and keep up to two decimal places.
   /// 1.01231   ->  '1.01'
   /// 1.102112  ->  '1.1'

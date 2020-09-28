@@ -1,4 +1,4 @@
-extension NextDate on DateTime {
+extension ccNextDate on DateTime {
   DateTime ccNextMonth(int step) {
     return DateTime(
       year,

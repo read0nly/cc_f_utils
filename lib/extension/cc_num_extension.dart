@@ -1,6 +1,6 @@
 import 'cc_string_extension.dart';
 
-extension CommaNum on num {
+extension ccCommaNum on num {
   String ccToCommaStr({int decimalPlaces}) {
     if (this == 0) {
       return '0';
