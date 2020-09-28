@@ -48,9 +48,6 @@ class CCButtonState extends State<CCButton> {
       child: Container(
         width: widget.size?.width,
         height: widget.size?.height,
-        padding: widget.size == null
-            ? const EdgeInsets.all(0)
-            : EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         decoration: BoxDecoration(
           color: widget.enable
               ? (_isHighlight
