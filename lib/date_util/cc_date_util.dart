@@ -31,7 +31,7 @@ class CCDateFormats {
 
 /// month->days.
 // ignore: non_constant_identifier_names
-final Map<int, int> MONTH_DAY = {
+final Map<int, int> CC_MONTH_DAY = {
   1: 31,
   2: 28,
   3: 31,
@@ -197,7 +197,7 @@ class CCDateUtil {
     int month = dateTime.month;
     int days = dateTime.day;
     for (int i = 1; i < month; i++) {
-      days = days + MONTH_DAY[i];
+      days = days + CC_MONTH_DAY[i];
     }
     if (isLeapYearByYear(year) && month > 2) {
       days = days + 1;
