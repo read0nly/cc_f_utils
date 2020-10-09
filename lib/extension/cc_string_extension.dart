@@ -51,6 +51,7 @@ extension ccHideChinaMobilePhoneEx on String {
 }
 
 extension ccHideBankCardNumEx on String {
+  // 银行卡号打码
   String ccHideBankCardNum() {
     if (this == null || this.isEmpty) {
       return '';

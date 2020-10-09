@@ -1,13 +1,13 @@
 import 'cc_string_extension.dart';
 
 extension ccCommaNum on num {
-  String ccToCommaStr({int decimalPlaces}) {
+  // The integer part plus a separator;
+  // The fractional part is rounded to the nearest 2 decimal places;
+  String ccToCommaStr() {
     if (this == 0) {
       return '0';
     }
-    String value = (decimalPlaces != null && decimalPlaces >= 0)
-        ? this.toStringAsFixed(decimalPlaces)
-        : this.toString();
+    String value = this.toStringAsFixed(2);
 
     String integerStr;
     String decimalStr;
