@@ -62,4 +62,17 @@ void main() {
     double number18 = 0.1264;
     expect(number18.ccToCommaStr(), '0.13');
   });
+
+  test('parseBool', () {
+    expect(CCDataFilter.parseBool('sdkfa'), false);
+    expect(CCDataFilter.parseBool('0'), false);
+    expect(CCDataFilter.parseBool(0), false);
+    expect(CCDataFilter.parseBool(null), false);
+    expect(CCDataFilter.parseBool('true'), true);
+    expect(CCDataFilter.parseBool('yes'), true);
+    expect(CCDataFilter.parseBool('YES'), true);
+    expect(CCDataFilter.parseBool('TRUE'), true);
+    expect(CCDataFilter.parseBool('1293'), true);
+    expect(CCDataFilter.parseBool('-1'), true);
+  });
 }

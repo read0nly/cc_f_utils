@@ -55,6 +55,9 @@ class CCDataFilter {
     return defaultValue;
   }
 
+  /// 讲任意类型的值解析成bool值
+  /// 如果 value是字符串，且不可以转成整数，那么 true yes 返回 true，否则返回false
+  /// 如果value 是 数字 或者 value 可以转成整数  那么 非0即1
   static bool parseBool(dynamic value, {bool defaultValue}) {
     if (value == null) {
       return defaultValue ?? false;
@@ -67,8 +70,16 @@ class CCDataFilter {
       return value != 0;
     }
     if (value is String) {
-      return value.toLowerCase() == "true" || value != "0";
+      if (value.toLowerCase() == "true" || value.toLowerCase() == "yes") {
+        return true;
+      } else {
+        int tempNum = int.tryParse(value);
+        if (tempNum != null && tempNum != 0) {
+          return true;
+        }
+      }
     }
+
     return false;
   }
 
