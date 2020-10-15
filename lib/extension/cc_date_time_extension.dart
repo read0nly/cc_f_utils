@@ -113,4 +113,14 @@ extension DateUtil on DateTime {
 
   DateTime get ccEndOfToday =>
       DateTime(this.year, this.month, this.day, 23, 59, 59, 999, 999);
+
+  DateTime get ccStartOfMonth => DateTime(this.year, this.month);
+
+  DateTime get ccEndOfMonth => DateTime.fromMillisecondsSinceEpoch(
+      this.ccNextMonth(1).ccStartOfMonth.millisecondsSinceEpoch - 1);
+
+  DateTime get ccStartOfYear => DateTime(this.year);
+
+  DateTime get ccEndOfYear => DateTime.fromMillisecondsSinceEpoch(
+      this.ccNextYear(1).ccStartOfYear.millisecondsSinceEpoch - 1);
 }
