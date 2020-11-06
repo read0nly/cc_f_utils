@@ -93,6 +93,7 @@ class CCDateUtil {
   /// format date by seconds.
   /// seconds 日期秒
   static String formatDateS(int s, {bool isUtc = false, String format}) {
+    if (s == null) return '';
     return formatDateMs(s * 1000, isUtc: isUtc, format: format);
   }
 
