@@ -191,6 +191,12 @@ class CCDateUtil {
     return getWeekday(dateTime, languageCode: languageCode, short: short);
   }
 
+  static DateTime getDateTimeByS(int s, {bool isUtc = false}) {
+    return s == null
+        ? null
+        : DateTime.fromMillisecondsSinceEpoch(s * 1000, isUtc: isUtc);
+  }
+
   /// get day of year.
   /// 在今年的第几天.
   static int getDayOfYear(DateTime dateTime) {
