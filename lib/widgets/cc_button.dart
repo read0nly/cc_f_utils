@@ -13,6 +13,7 @@ class CCButton extends StatefulWidget {
   final BorderRadius borderRadius;
   final Size size;
   final Border border;
+  final Widget leading;
   final VoidCallback onTap;
 
   const CCButton({
@@ -29,6 +30,7 @@ class CCButton extends StatefulWidget {
     this.borderRadius,
     this.size,
     this.border,
+    this.leading,
     this.onTap,
   }) : super(key: key);
 
@@ -58,17 +60,36 @@ class CCButtonState extends State<CCButton> {
           border: widget.border,
         ),
         alignment: Alignment.center,
-        child: Text(
-          widget.title ?? '',
-          style: TextStyle(
-            color: widget.enable
-                ? (_isHighlight
-                    ? widget.highlightTitleColor ?? widget.titleColor
-                    : widget.titleColor)
-                : widget.disableTitleColor ?? widget.titleColor,
-            fontSize: widget.titleSize,
-          ),
-        ),
+        child: widget.leading == null
+            ? Text(
+                widget.title ?? '',
+                style: TextStyle(
+                  color: widget.enable
+                      ? (_isHighlight
+                          ? widget.highlightTitleColor ?? widget.titleColor
+                          : widget.titleColor)
+                      : widget.disableTitleColor ?? widget.titleColor,
+                  fontSize: widget.titleSize,
+                ),
+              )
+            : Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  widget.leading,
+                  Text(
+                    widget.title ?? '',
+                    style: TextStyle(
+                      color: widget.enable
+                          ? (_isHighlight
+                              ? widget.highlightTitleColor ?? widget.titleColor
+                              : widget.titleColor)
+                          : widget.disableTitleColor ?? widget.titleColor,
+                      fontSize: widget.titleSize,
+                    ),
+                  )
+                ],
+              ),
       ),
     );
   }
