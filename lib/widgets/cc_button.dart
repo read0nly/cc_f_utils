@@ -74,7 +74,7 @@ class CCButtonState extends State<CCButton> {
               )
             : Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   widget.leading,
                   Text(
