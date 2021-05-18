@@ -40,7 +40,7 @@ extension ccHideChinaMobilePhoneEx on String {
     String pre = '';
     String sub = '';
     try {
-      pre = this.substring(0, 4);
+      pre = this.substring(0, 3);
     } catch (e) {}
     try {
       sub = this.substring(this.length - 4);
